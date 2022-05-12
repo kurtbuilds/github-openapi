@@ -12,8 +12,13 @@ run *args:
 alias r := run
 
 generate:
+    rm -f src/lib.rs src/model.rs
     cargo run --example generate
 alias gen := generate
+
+
+doc:
+    cargo doc --no-deps --open
 
 release:
     cargo build --release
